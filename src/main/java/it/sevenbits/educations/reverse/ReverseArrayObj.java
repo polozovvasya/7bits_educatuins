@@ -8,11 +8,12 @@ public final class ReverseArrayObj implements IReverseArrayObj {
     /**
      *  Reverse T
      */
-    public <T> T[] reversArrayObj(T[] arrayReverse) {
+    public void reversArrayObj(IObjArray objArray) {
+        Object[] arrayReverse = objArray.getArrayObj();
         try {
             int countArr = arrayReverse.length;
             int m = countArr / 2;
-            T value;
+            Object value;
 
             for (int i = 0; i < m; i++) {
                 value = arrayReverse[i];
@@ -23,13 +24,14 @@ public final class ReverseArrayObj implements IReverseArrayObj {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return arrayReverse;
+        objArray.setArrayObj(arrayReverse);
     }
 
     /**
      *  Reverse T array to String
      */
-    public <T> String toStrinArrayObj(T[] inputArray) {
+    public String toStrinArrayObj(IObjArray objArray) {
+        Object[] inputArray = objArray.getArrayObj();
         String strResult;
         strResult = "";
         for (int i = 0; i < inputArray.length; i++) {

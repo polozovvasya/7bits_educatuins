@@ -30,11 +30,11 @@ public final class Bootstrap {
         try {
 
             ObjArray arrIntegerObj = new ObjArray<Integer>(myArray);
+
             ReverseArrayObj reverseArrayObj = new ReverseArrayObj();
+            reverseArrayObj.reversArrayObj(arrIntegerObj);
 
-            arrIntegerObj.setArrayObj(reverseArrayObj.reversArrayObj(arrIntegerObj.getArrayObj()));
-
-            System.out.println(reverseArrayObj.toStrinArrayObj(arrIntegerObj.getArrayObj()));
+            System.out.println(reverseArrayObj.toStrinArrayObj(arrIntegerObj));
 
         } catch (Exception e) {
             e.printStackTrace();

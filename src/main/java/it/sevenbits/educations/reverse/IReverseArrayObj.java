@@ -8,10 +8,10 @@ interface IReverseArrayObj {
     /**
      * reverse T array algoritm
      */
-    <T> T[] reversArrayObj(T[] inputArray);
+    void reversArrayObj(IObjArray inputArray);
 
     /**
      * reverse T array to String
      */
-    <T> String toStrinArrayObj(T[] inputArray);
+    String toStrinArrayObj(IObjArray inputArray);
 }
