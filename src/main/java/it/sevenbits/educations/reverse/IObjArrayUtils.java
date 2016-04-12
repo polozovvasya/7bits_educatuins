@@ -1,9 +1,11 @@
 package it.sevenbits.educations.reverse;
 
 /**
+ * Interface for ObjArray Utils method
  * Created by iqtekpva on 12.04.16.
  */
-public interface IObjArrayUtils {
+interface IObjArrayUtils {
+
     /**
      * reverse T array to String
      */

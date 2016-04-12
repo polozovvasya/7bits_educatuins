@@ -1,6 +1,7 @@
 package it.sevenbits.educations.reverse;
 
 /**
+ * Class for ObjArray Utils method
  * Created by iqtekpva on 12.04.16.
  */
 public class ObjArrayUtils implements IObjArrayUtils {
