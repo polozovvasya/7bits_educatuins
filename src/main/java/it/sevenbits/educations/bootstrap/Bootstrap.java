@@ -1,6 +1,8 @@
 package it.sevenbits.educations.bootstrap;
 import it.sevenbits.educations.reverse.ObjArray;
-import it.sevenbits.educations.reverse.ReverseArrayObj;
+import it.sevenbits.educations.reverse.ObjArrayReverse;
+import it.sevenbits.educations.reverse.ObjArrayUtils;
+
 import java.util.Arrays;
 
 /**
@@ -30,11 +32,12 @@ public final class Bootstrap {
         try {
 
             ObjArray arrIntegerObj = new ObjArray<Integer>(myArray);
+            ObjArrayUtils objArrayUtils = new ObjArrayUtils();
 
-            ReverseArrayObj reverseArrayObj = new ReverseArrayObj();
-            reverseArrayObj.reversArrayObj(arrIntegerObj);
+            ObjArrayReverse reverseArrayObj = new ObjArrayReverse();
+            reverseArrayObj.reversObjArray(arrIntegerObj);
 
-            System.out.println(reverseArrayObj.toStrinArrayObj(arrIntegerObj));
+            System.out.println(objArrayUtils.toStringObjArray(arrIntegerObj));
 
         } catch (Exception e) {
             e.printStackTrace();

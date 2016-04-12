@@ -1,2 +1,3 @@
-Manifest-Version: 1.0-SNAPSHOT
+Manifest-Version: 1.0
 Main-Class: it.sevenbits.educations.bootstrap.Bootstrap
+
