@@ -6,7 +6,10 @@
 
     <groupId>it.sevenbits</groupId>
     <artifactId>7bits_educations</artifactId>
-    <version>1.0-SNAPSHOT</version>k
+    <version>1.1</version>
+
+    <!-- Output to jar format -->
+    <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
@@ -14,11 +17,19 @@
             <artifactId>annotations-java5</artifactId>
             <version>RELEASE</version>
         </dependency>
+
+        <dependency>
+            <scope>test</scope>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>RELEASE</version>
+        </dependency>
     </dependencies>
 
     <build>
         <outputDirectory>target</outputDirectory>
         <finalName>7bits_educations</finalName>
+
         <resources>
             <resource>
                 <directory>${basedir}/src/main/resources</directory>
@@ -29,16 +40,15 @@
         </resources>
         <plugins>
             <plugin>
-                <artifactId>maven-assembly-plugin</artifactId>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
                 <configuration>
                     <archive>
                         <manifest>
+                            <!-- Jar file entry point -->
                             <mainClass>it.sevenbits.educations.bootstrap.Bootstrap</mainClass>
                         </manifest>
                     </archive>
-                    <descriptorRefs>
-                        <descriptorRef>jar-with-dependencies</descriptorRef>
-                    </descriptorRefs>
                 </configuration>
             </plugin>
         </plugins>

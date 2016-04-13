@@ -1,4 +1,7 @@
 package it.sevenbits.educations.reverse;
+
+import it.sevenbits.educations.reverse.interfaces.IObjArray;
+
 /**
  * Reverse array
  * Generic class

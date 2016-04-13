@@ -1,5 +1,8 @@
 package it.sevenbits.educations.reverse;
 
+import it.sevenbits.educations.reverse.interfaces.IObjArray;
+import it.sevenbits.educations.reverse.interfaces.IObjArrayUtils;
+
 /**
  * Class for ObjArray Utils method
  * Created by iqtekpva on 12.04.16.
