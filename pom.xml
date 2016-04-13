@@ -8,21 +8,19 @@
     <artifactId>7bits_educations</artifactId>
     <version>1.1</version>
 
-    <!-- Output to jar format -->
-    <packaging>jar</packaging>
-
     <dependencies>
+        <!--
         <dependency>
             <groupId>org.jetbrains</groupId>
             <artifactId>annotations-java5</artifactId>
             <version>RELEASE</version>
         </dependency>
-
+        -->
         <dependency>
             <scope>test</scope>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>RELEASE</version>
+            <version>4.12</version>
         </dependency>
     </dependencies>
 
@@ -51,6 +49,34 @@
                     </archive>
                 </configuration>
             </plugin>
+            <!--
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>report</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-surefile-plugins</artifactId>
+                <version>2.10</version>
+                <configuration>
+                    <argLine>${argLine}</argLine>
+                </configuration>
+            </plugin>
+            -->
         </plugins>
     </build>
 

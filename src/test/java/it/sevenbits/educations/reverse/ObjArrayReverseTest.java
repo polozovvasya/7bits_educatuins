@@ -1,7 +1,8 @@
 package it.sevenbits.educations.reverse;
 
-import it.sevenbits.educations.reverse.ObjArray;
-import it.sevenbits.educations.reverse.ObjArrayReverse;
+import org.junit.Before;
+import org.junit.Test;
+
 import static org.junit.Assert.assertArrayEquals;
 
 /**
@@ -15,11 +16,12 @@ public class ObjArrayReverseTest {
      */
     private ObjArrayReverse reverse;
 
-    @org.junit.Before
+    @Before
     public void setUp() throws Exception {
         this.reverse = new ObjArrayReverse();
     }
 
+    @Test
     public void testReversObjArray() throws Exception {
         Integer[] original = {1, 2, 3, 4, 5};
         Integer[] finish = {5, 4, 3, 2, 1};
