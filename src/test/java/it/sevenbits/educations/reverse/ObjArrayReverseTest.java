@@ -16,15 +16,23 @@ public class ObjArrayReverseTest {
      */
     private ObjArrayReverse reverse;
 
+    /**
+     * setUp
+     * @throws Exception - Exception
+     */
     @Before
     public void setUp() throws Exception {
         this.reverse = new ObjArrayReverse();
     }
 
+    /**
+     * test testReversObjArrayInteger
+     * @throws Exception - Exception
+     */
     @Test
-    public void testReversObjArray() throws Exception {
-        Integer[] original = {1, 2, 3, 4, 5};
-        Integer[] finish = {5, 4, 3, 2, 1};
+    public void testReversObjArrayInteger() throws Exception {
+        final Integer[] original = {1, 2, 3, 4, 5};
+        final Integer[] finish = {5, 4, 3, 2, 1};
 
         ObjArray objOriginal = new ObjArray<Integer>(original);
         ObjArray objFinish = new ObjArray<Integer>(finish);
@@ -34,4 +42,20 @@ public class ObjArrayReverseTest {
         assertArrayEquals("wrond reverse", objFinish.getArrayObj(), objOriginal.getArrayObj());
     }
 
+    /**
+     * test testReversObjArrayString
+     * @throws Exception - Exception
+     */
+    @Test
+    public void testReversObjArrayString() throws Exception {
+        final String[] original = {"1", "2", "3", "4", "5"};
+        final String[] finish = {"5", "4", "3", "2", "1"};
+
+        ObjArray objOriginal = new ObjArray<String>(original);
+        ObjArray objFinish = new ObjArray<String>(finish);
+
+        this.reverse.reversObjArray(objOriginal);
+
+        assertArrayEquals("wrond reverse", objFinish.getArrayObj(), objOriginal.getArrayObj());
+    }
 }
